@@ -1,7 +1,3 @@
-# ==========================================
-# Sistema de Gestión de Inventario de Laboratorio
-# ==========================================
-
 # 1. SEMESTRE_ACTUAL (Tupla)
 SEMESTRE_ACTUAL = ("Otoño", 2025)
 
@@ -26,14 +22,14 @@ equipo_2 = {
     "calibraciones": ["2023-11-10", "2024-11-15"]
 }
 
-# 1️⃣ Poblar el inventario
+# 1️ Poblar el inventario
 inventario.append(equipo_1)
 inventario.append(equipo_2)
 
-# 2️⃣ Añadir nuevo tipo al set
+# 2️ Añadir nuevo tipo al set
 EQUIPOS_UNICOS.add("Generador de Señales")
 
-# 3️⃣ Añadir equipo nuevo
+# 3️ Añadir equipo nuevo
 equipo_3 = {
     "id": "MULTI-001",
     "tipo": "Multímetro",
@@ -42,12 +38,12 @@ equipo_3 = {
 }
 inventario.append(equipo_3)
 
-# 4️⃣ Actualizar equipo OSC-001
+# 4️ Actualizar equipo OSC-001
 for equipo in inventario:
     if equipo["id"] == "OSC-001":
         equipo["calibraciones"].append("2025-10-27")
 
-# 5️⃣ Generar Reporte
+# 5️ Generar Reporte
 print(f"📅 Semestre Actual: {SEMESTRE_ACTUAL[0]} {SEMESTRE_ACTUAL[1]}")
 print("\n🔧 Tipos de Equipos Disponibles:")
 for tipo in EQUIPOS_UNICOS:
